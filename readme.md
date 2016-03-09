@@ -9,9 +9,7 @@ This is a collection of OSX Automator applets \(and related/dependent things lik
 ### Auto-tab-year:
 
 This is intended to aid in the entry of beginning/ending dates for the BAMPFA Drupal CMS. For films in particular, dates must be entered in the format YYYY-MM-DD, with the release year of a film represented as YYYY-01-01 \[through\] YYYY-12-31, entered into two separate fields. For example, *Bladerunner* was released in 1982, so its beginning/ending dates would be entered as:
-Beginning date    | Ending date
----------- | -----------
-1982-01-01 | 1982-12-31
+Beginning date: 1982-01-01  Ending date: 1982-12-31
  
 #### usage
 This applet asks you for a year, then asks you to click into the first \(earliest\) date field, then to click "continue." The full date range is pasted into the appropriate date fields for you.
