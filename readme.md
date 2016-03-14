@@ -17,7 +17,7 @@ This applet asks you for a year, then asks you to click into the first \(earlies
 Recommended installation: 
 1) Create a folder in your `Applications` folder for Automator apps. Copy the app `auto-tab-year` into the folder.
 2) Copy the workflow `launch-year` into `[USER]>Library>Services`.
-3) Open `System Preferences>Keyboard>Shortcuts>Services`. You should see `launch-year` under General. Click into the shortcut column and type in your preferred shrotcut. I used `⌘F1` . 
+3) Open `System Preferences>Keyboard>Shortcuts>Services`. You should see `launch-year` under General. Click into the shortcut column and type in your preferred shortcut. I used `⌘F1` . 
 4) Press your shortcut to test it out.
 
 You could also just use this as a standalone applet that you double click whenever you need to access the date range, but that defeats the time-saving nature of this shortcut.
@@ -58,6 +58,18 @@ example : **d7566u34475667ORIGINAL-FILENAME_o4.jpg**
 For derivative images, there is an additional _o\[1-digit\].
 
 It is unclear what the 4-digit number following the "d" is. The 8-digit number following the "u" is the Piction UMO ID \(unique system ID for the asset\). The single digit following "_o" is the Piction derivative level indicator.
+
+### Dots-to-dashes
+
+This helps convert image filenames that contain BAMPFA art collection accession numbers \(e.g. `2012.34.56.a-z`\). In circumstances where you generate a lot of filenames from the art collection database, from some other list, or from any place that has the accession number in this format, this helps you convert the dots in the filenames to dashes, per the BAMPFA filenaming guidelines. For example: 
+
+> 2015.1.2.3.a -> bampfa_2015-1-2-3-a_001_4.tif
+> 
+> 2016.7.8.e-f -> bampfa_2016-7-8-e-f_001_4.tif
+
+#### usage
+
+Drag and drop a folder of filenames, confirm when asked. Works recursively in subdirectories.
 
 ### Cinefiles backup log
 
