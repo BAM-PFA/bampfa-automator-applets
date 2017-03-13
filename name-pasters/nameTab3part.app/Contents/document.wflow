@@ -20,46 +20,51 @@
 					<key>Optional</key>
 					<true/>
 					<key>Types</key>
-					<array/>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.1.1</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
-					<string>Finder</string>
+					<string>Automator</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
-					<key>appPath</key>
-					<dict>
-						<key>isPathPopUp</key>
-						<true/>
-						<key>variableUUIDsInMenu</key>
-						<array/>
-					</dict>
+					<key>source</key>
+					<dict/>
 				</dict>
 				<key>AMProvides</key>
 				<dict>
 					<key>Container</key>
 					<string>List</string>
 					<key>Types</key>
-					<array/>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Launch Application.action</string>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
-				<string>Launch Application</string>
+				<string>Run AppleScript</string>
 				<key>ActionParameters</key>
 				<dict>
-					<key>appPath</key>
-					<string>/Applications/automator shit/plainText.app</string>
+					<key>source</key>
+					<string>on run {input, parameters}	set AppleScript's text item delimiters to {space}	set x to (the clipboard)	set firstName to text item 1 of x	set middleName to text item 2 of x	set lastName to text item 3 of x	set the clipboard to firstName as text	tell application "System Events"		keystroke "v" using command down	end tell	do shell script "/bin/sleep .25"
+	
+	tell application "System Events"		keystroke tab	end tell
+	
+	set the clipboard to middleName as text	tell application "System Events"		keystroke "v" using command down	end tell	
+	do shell script "/bin/sleep .25"	tell application "System Events"		keystroke tab	end tell	
+	set the clipboard to lastName as text	tell application "System Events"		keystroke "v" using command down	end tell	--return the clipboardend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.OpenApplication</string>
+				<string>com.apple.Automator.RunScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.1.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<true/>
+				<false/>
 				<key>CanShowWhenRun</key>
 				<true/>
 				<key>Category</key>
@@ -67,30 +72,34 @@
 					<string>AMCategoryUtilities</string>
 				</array>
 				<key>Class Name</key>
-				<string>AMLaunchApplicationAction</string>
+				<string>RunScriptAction</string>
 				<key>InputUUID</key>
-				<string>0E7D41EB-2503-487D-9BF7-F6EFFC5A7EDA</string>
+				<string>6FDDE7F7-1808-4CE7-8F41-29272205D008</string>
 				<key>Keywords</key>
 				<array>
-					<string>File</string>
-					<string>Open</string>
+					<string>Run</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>0B82AF69-EF34-4F49-914B-4A555D65A669</string>
+				<string>876D651C-2761-4D7E-9885-8D6A3A93899B</string>
 				<key>UUID</key>
-				<string>6639E61F-935B-447F-A959-45DA1EBA7061</string>
+				<string>F132201F-E4E3-40CC-BABE-039F378CDFB8</string>
 				<key>UnlocalizedApplications</key>
 				<array>
-					<string>Finder</string>
+					<string>Automator</string>
 				</array>
 				<key>arguments</key>
 				<dict>
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string>/Applications/Contacts.app</string>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
 						<key>name</key>
-						<string>appPath</string>
+						<string>source</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -102,9 +111,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>512.000000:173.000000</string>
+				<string>512.000000:719.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Launch Application.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -114,14 +123,8 @@
 	<dict/>
 	<key>workflowMetaData</key>
 	<dict>
-		<key>serviceInputTypeIdentifier</key>
-		<string>com.apple.Automator.nothing</string>
-		<key>serviceOutputTypeIdentifier</key>
-		<string>com.apple.Automator.nothing</string>
-		<key>serviceProcessesInput</key>
-		<integer>0</integer>
 		<key>workflowTypeIdentifier</key>
-		<string>com.apple.Automator.servicesMenu</string>
+		<string>com.apple.Automator.application</string>
 	</dict>
 </dict>
 </plist>

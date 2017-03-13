@@ -38,6 +38,28 @@ Recommended installation:
 3) Open `System Preferences>Keyboard>Shortcuts>Services`. You should see `do-pain-text` under General. Click into the shortcut column and type in your preferred shrotcut. I used `⌘⇧V `.  \(Command-Shift-v\)
 4) Press your shortcut to test it out.
 
+
+### Name Paster
+
+This is similar to the other pasters. It separates out `space` delimited names into respective parts. Given FirstName LastName in plain text and a set of fields for 
+
+|FirstName|MiddleName|LastName|
+|--|--|--|
+
+use the nameTab script to paste in the right parts of the name where they belong. I realized that some people also have middle names, so in those cases you can use nameTab3part. 
+
+#### usage
+
+Copy the name you want to separate. Put your cursor in the FirstName field and paste away. Note: you can only paste once, for whatever reason. Go AppleScript. 
+
+Recommended installation:
+
+1) Create a folder in your `Applications` folder for Automator apps. Copy the apps `nameTab` and `nameTab3part` into the folder.
+2) Copy the workflows `do-FN-LN` and `do-FN-MN-LN` into `[USER]>Library>Services`.
+3) Open `System Preferences>Keyboard>Shortcuts>Services`. You should see the `do...` services under General. Click into the shortcut column and type in your preferred shrotcuts.
+4) Press your shortcuts to test them out.
+
+
 ## Miscellaneous other applets
 -----
 

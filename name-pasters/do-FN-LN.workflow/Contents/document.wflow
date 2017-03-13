@@ -52,7 +52,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>appPath</key>
-					<string>/Applications/automator shit/plainText.app</string>
+					<string>/Applications/automator shit/nameTab.app</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.OpenApplication</string>
@@ -69,16 +69,16 @@
 				<key>Class Name</key>
 				<string>AMLaunchApplicationAction</string>
 				<key>InputUUID</key>
-				<string>0E7D41EB-2503-487D-9BF7-F6EFFC5A7EDA</string>
+				<string>653D7691-3924-4B99-A4DD-BBA45A708E2E</string>
 				<key>Keywords</key>
 				<array>
 					<string>File</string>
 					<string>Open</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>0B82AF69-EF34-4F49-914B-4A555D65A669</string>
+				<string>0D8F744C-5DE3-43FC-9EF3-A23E048294A3</string>
 				<key>UUID</key>
-				<string>6639E61F-935B-447F-A959-45DA1EBA7061</string>
+				<string>D2AEFE68-3DBD-44CD-87C5-A9B6AC3EB56F</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Finder</string>
@@ -99,6 +99,8 @@
 						<string>0</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
